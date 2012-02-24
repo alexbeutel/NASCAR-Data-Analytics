@@ -6,7 +6,7 @@ Statistical Services.
 
 The scripts are used as follow:
 
- * nascar\_scrape.py is used for crawling nascarmedia.com's Statistical
+ * `nascar_scrape.py` is used for crawling nascarmedia.com's Statistical
  Services and saving link information to a MySQL database
  * download\_data.php is used to take all of the links for data file froms
  NASCAR media and downloading them, both to a file on the computer and the
