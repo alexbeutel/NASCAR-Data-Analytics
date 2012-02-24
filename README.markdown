@@ -2,11 +2,11 @@ NASCAR Data Analytics
 ==================================
 
 The included code is a number of scripts to scrape
-[http://nascarmedia.com](nascarmedia.com)'s Statistical Services.
+[nascarmedia.com](https://www.nascarmedia.com/)'s Statistical Services.
 
 The scripts are used as follow:
 
- * `nascar_scrape.py` is used for crawling [http://nascarmedia.com](nascarmedia.com)'s Statistical
+ * `nascar_scrape.py` is used for crawling [nascarmedia.com](https://www.nascarmedia.com/)'s Statistical
  Services and saving link information to a MySQL database
  * `download_data.php` is used to take all of the links for data file froms
  NASCAR media and downloading them, both to a file on the computer and the
@@ -16,6 +16,11 @@ The scripts are used as follow:
  * `parse_xml.py` converts XML files to CSV format
  * `queries.sql` are a few MySQL queries to check the datasets available
 
+Because `download_data.php`, `parse_text.py` and `parse_xml.py` output data to
+the filesystem, all three require specific subfolder structures to output their
+files as can be seen in the code.
+Also, both `parse_text.py` and `parse_xml.py` make files index.csv, which holds
+information about each file outputted.
 
 
 Dependencies
@@ -28,7 +33,7 @@ Dependencies
 
 
 Each script requires MySQL credentials and `nascar_scrape.py` requires
-credentials to login to [http://nascarmedia.com](nascarmedia.com).  Credentials
+credentials to login to [nascarmedia.com](https://www.nascarmedia.com/).  Credentials
 for Python scripts should go in `user_info.py`, in the form:
 
 	mysqlHost = "MYSQL.SERVERADDRESS.COM" 
